@@ -1,0 +1,40 @@
+html {
+  background: url(./gabriel-meinert--xyka0zLDq0-unsplash.jpg);
+  background-size: cover;
+  font-family: Helvetica, sans-serif;
+  text-align: center;
+  font-size: 10px;
+}
+
+body {
+  font-size: 2rem;
+  display: flex;
+  flex: 1;
+  min-height: 100vh;
+  align-items: center;
+}
+
+.clock {
+  height: 30rem;
+  width: 30rem;
+  border: 20px solid rgb(22, 104, 22);
+  border-radius: 50%;
+  margin: 50px auto;
+  position: relative;
+}
+
+/* .clockface{
+    position: relative;
+    margin: 2rem;
+} */
+.hand {
+  width: 50%;
+  height: 6px;
+  background: black;
+  position: absolute;
+  top: 50%;
+  transform-origin: 100%;
+  transform: rotate(90deg);
+  transition: all 0.05s;
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}/*# sourceMappingURL=style.css.map */

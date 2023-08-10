@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>JS Challenge # 2</title>
+</head>
+<body>
+    <div class="clock">
+        <div class="clockface">
+            <div class="hand hour-hand"></div>
+            <div class="hand min-hand"></div>
+            <div class="hand sec-hand"></div>
+        </div>
+    </div>
+</body>
+<script>
+    const secondhand = document.querySelector('.sec-hand');
+    const minshand = document.querySelector('.min-hand');
+    const hourhand = document.querySelector('.hour-hand');
+    function clock(){
+        const now = new Date();
+    const seconds  = now.getSeconds();
+    const secdegree = ((seconds/60) * 360) + 90;
+    secondhand.style.transform = `rotate(${secdegree}deg)`;
+    const min  = now.getMinutes();
+    const mindegree = ((min/60) * 360) + 90;
+    minshand.style.transform = `rotate(${mindegree}deg)`;
+    const hrs  = now.getHours();
+    const hrsdegree = ((hrs/60) * 360) + 90;
+    hourhand.style.transform = `rotate(${hrsdegree}deg)`;
+
+    }
+    setInterval(clock , 1000)
+    
+</script>
+</html>
